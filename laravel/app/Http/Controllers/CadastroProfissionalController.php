@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-
+use App\Models\Usuario;
+ 
 class CadastroProfissionalController extends Controller
 {
     public function index(Request $formRequest)
@@ -14,34 +14,16 @@ class CadastroProfissionalController extends Controller
 
     public function store(Request $formRequest)
     {
-        // Banco está inconsistente, considerar refazê-lo. Palavras estão em case sensitive.
-        //Substituir por um ORM
+        $email = $formRequest->email_profissional;
+        $senha = $formRequest->senha_profissional;
+        
+        $usuario = new Usuario();
+        $usuario->email = $email;
+        $usuario->senha = $senha;
 
-        DB::insert(
-            "INSERT INTO profissional (
-               nome,
-               celular,
-               email,
-               senha
-            -- profissao_id_profissao -- Não implementado por falta de conhecimento técnico
-            -- Implementar endereço
-            ) 
-            VALUES (
-                :nome,
-                :celular,
-                :email,
-                :senha
-            );",
-            // Colocar em array isolado
-            [
-                ":nome" => $formRequest->nome_profissional,
-                ":celular" => $formRequest->numero_profissional,
-                ":email" => $formRequest->email_profissional,
-                ":senha" => sha1($formRequest->senha_profissional)
-            ]
-        );
-
-        return redirect('/home');
-
+        var_dump($usuario->save());
+        
+        return redirect('/');
+       
     }
 }
