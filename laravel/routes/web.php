@@ -25,3 +25,5 @@ Route::post('/cadastro/cliente', 'App\Http\Controllers\CadastroClienteController
 Route::post('/cadastro/cliente/criar', 'App\Http\Controllers\CadastroClienteController@store');
 Route::post('/cadastro/profissional', 'App\Http\Controllers\CadastroProfissionalController@index');
 Route::post('/cadastro/profissional/criar', 'App\Http\Controllers\CadastroProfissionalController@store');
+Route::get('/login','App\Http\Controllers\LoginController@index');
+Route::post('/login', 'App\Http\Controllers\LoginController@handle');
