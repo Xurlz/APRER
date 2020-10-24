@@ -16,6 +16,7 @@ class CriarTabelaUsuario extends Migration
         Schema::create('usuarios', function(Blueprint $table) {
             $table->id();
             $table->string('email')->unique();
+            $table->string('tipo');
             $table->string('senha');
         });
     }
