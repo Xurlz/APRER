@@ -12,14 +12,6 @@ class LoginController extends Controller
         return view ('login.index');
     }
 
-    public function login(Request $loginRequest)
-    {
-        echo $loginRequest->url();
-        var_dump($_POST);
-        exit;
-        return redirect('/home');
-    }
-
     public function handle(Request $loginRequest)
     {
         $email = $loginRequest->usuario;
