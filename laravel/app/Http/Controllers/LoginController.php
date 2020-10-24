@@ -22,38 +22,27 @@ class LoginController extends Controller
 
     public function handle(Request $loginRequest)
     {
-        // echo "login handle";
-        // echo $loginRequest->usuario;
-        // echo $loginRequest->senha;
-        var_dump(
+        $email = $loginRequest->usuario;
+        $senha = $loginRequest->senha;
 
-            $this->userFetch(
-                $loginRequest->usuario,
-                sha1($loginRequest->senha)
-            )
+        
+        $usuario['email'] = 
+            DB::table('usuarios')
+            ->where([
+                ['email', $email],
+                ['senha', $senha]
+            ])
+            ->value('email')
+        ;
+        
+        $usuario['senha'] =
+            DB::table('usuarios')
+            ->where([
+                ['email', $email],
+                ['senha', $senha]
+            ])
+            ->value('senha')
+        ;
 
-        );
-            
-        // var_dump($_POST);
-    }
-
-    private function userFetch($usuario, $senha)
-    {
-        // implementado com padrões não recomendados
-        return 
-        DB::select(
-            "SELECT
-                *
-                -- email,
-                -- nome,
-                -- senha
-            FROM 
-                cliente as c,
-                profissional as p
-            WHERE
-                c.email = {$usuario} AND
-                p.email = {$usuario} AND
-            "
-        );
     }
 }
