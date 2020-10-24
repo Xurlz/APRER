@@ -22,9 +22,6 @@ class CadastroClienteController extends Controller
         $usuario->email = $email;
         $usuario->senha = $senha;
 
-
-        var_dump($usuario->save());
-
         return redirect('/');
        
     }
