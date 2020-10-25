@@ -23,3 +23,7 @@ Route::post('/cadastro/profissional/criar', 'App\Http\Controllers\CadastroProfis
 Route::get('/login','App\Http\Controllers\LoginController@index');
 Route::post('/login', 'App\Http\Controllers\LoginController@handle');
 Route::get('/', function(){ return view('home.index');});
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
