@@ -36,6 +36,6 @@ class LoginController extends Controller
             ->value('senha')
         ;
         
-        return view('cliente.index',compact('usuario'));
+        return view('usuario.index',compact('usuario'));
     }
 }

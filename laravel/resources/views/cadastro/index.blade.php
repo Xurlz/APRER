@@ -8,7 +8,7 @@
         <div class="col-3"></div>
 
         <div class="col-6 d-flex justify-content-center border rounded" style="background-color: #B8860B; border-color: gold; padding-bottom: 20px">
-            <form name="signup" method="post" onsubmit="get_action(this)"><br>
+            <form name="signup" method="post"><br>
                 @csrf
                 <h1 class="h3 mb-3 font-weight-normal" style="color: black; font-family: monospace;">Cadastro</h1>	
                 <div class="form-group">
