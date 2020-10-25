@@ -68,7 +68,7 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item">
-                <a class="nav-link" href="/login">Serviços</a>
+                <a class="nav-link" href="#">Serviços</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Encontre um Profissional</a>
@@ -76,10 +76,10 @@
         </ul> 
         <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
             <li class="nav-item">
-                <a class="nav-link" href="/login">Entrar</a>
+                <a class="nav-link" href="{{ route('login') }}">Entrar</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/cadastro">Cadastre-se</a>
+                <a class="nav-link" href="{{ route('register') }}">Cadastre-se</a>
             </li>
         </ul> 
     </nav>
