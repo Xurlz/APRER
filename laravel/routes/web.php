@@ -13,15 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/teste', function(){ return view('teste.index');});
-
-Route::get('/login','App\Http\Controllers\LoginController@index');
-Route::post('/login', 'App\Http\Controllers\LoginController@handle');
-
-Route::get('/cadastro', 'App\Http\Controllers\CadastroController@index');
-Route::post('/cadastro', 'App\Http\Controllers\CadastroController@store');
-
-Route::get('/', function(){ return view('home.index');});
+Route::get('/', function(){ return view('index');});
 
 Auth::routes();
 
