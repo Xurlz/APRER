@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'APRER') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -22,13 +22,55 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+        .map {
+            height: 400px;
+            width: 100%;
+        }
 
+        .margin{
+            margin-top: 0px;
+            background-color: black;
+            color:yellow;
+            font-family: monospace;
+            padding-bottom: 20px;
+            padding-top: 20px;
+        }
+
+        .navbar{
+            font-family: monospace;
+            font-size: 18px;
+            background:#DAA429;
+        }
+
+        #map {
+            height: 100%;
+        }
+        /*Provavelmente desnecessário */
+        /* Optional: Makes the sample page fill the window. */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container-fluid{
+            padding-bottom: 100px;
+        }
+
+
+        p, h1, h2, h3, h4, h5, h6{
+            font-family: monospace;
+        }
+
+    </style>
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light">
-            <a class="navbar-brand" href="/index">
-                <img src="../img/APRERLOGO.png" width="150">
+            <a class="navbar-brand" href="/">
+                <!-- Não está funcionando -->
+                <img src="{{ asset('/img/aprerlogo.png') }}" width="150">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -71,6 +113,11 @@
         <main class="py-4">
             @yield('content')
         </main>
+
+        <footer class="container-fluid text-center bg-footer margin">
+            <p class="margin">APRER - Aplicativo Para Resoluções Residenciais  _  Todos os direitos reservados
+            <br>Rua Augusta, 1508 - Consolação - Sao Paulo - SP</br></p>
+        </footer>
     </div>
 </body>
 </html>
