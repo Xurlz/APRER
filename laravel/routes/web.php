@@ -22,3 +22,7 @@ Route::get('/cadastro', 'App\Http\Controllers\CadastroController@index');
 Route::post('/cadastro', 'App\Http\Controllers\CadastroController@store');
 
 Route::get('/', function(){ return view('home.index');});
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
