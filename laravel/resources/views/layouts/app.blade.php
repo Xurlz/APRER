@@ -78,11 +78,12 @@
         <main class="py-4">
             @yield('content')
         </main>
+
+        <footer class="footer bg-footer container-fluid text-center">
+            <p class="margin">APRER - Aplicativo Para Resoluções Residenciais  _  Todos os direitos reservados
+            <br>Rua Augusta, 1508 - Consolação - Sao Paulo - SP</br></p>
+        </footer>
     </div>
     
-    <footer class="footer container-fluid text-center bg-footer margin">
-        <p class="margin">APRER - Aplicativo Para Resoluções Residenciais  _  Todos os direitos reservados
-        <br>Rua Augusta, 1508 - Consolação - Sao Paulo - SP</br></p>
-    </footer>
 </body>
 </html>
