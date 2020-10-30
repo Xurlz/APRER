@@ -12,30 +12,25 @@ class TestePontuacaoController extends Controller
         return view('teste-pontuacao');
     }
 
-    public function adicionaPonto(Request $request)
+    public function atualizaPontuacao(Request $request)
     {
+        $tipo = $request->tipo;
         $user = $request->user();
 
-        $user->addPoint(1);
-        
+        switch($tipo)
+        {
+            case 'adiciona':
+                $user->addPoint(1);
+            break;
+            case 'reduz':
+                $user->reducePoint(1);
+            break;
+            case 'reenicia':
+                $user->resetPoint();
+            break;
+        }
+
         return redirect()->route('teste_pontuacao');
     }
 
-    public function reduzPonto(Request $request)
-    {
-        $user = $request->user();
-
-        $user->reducePoint(1);
-        
-        return redirect()->route('teste_pontuacao');
-    }
-
-    public function reeniciaPonto(Request $request)
-    {
-        $user = $request->user();
-
-        $user->resetPoint();
-        
-        return redirect()->route('teste_pontuacao');
-    }
 }

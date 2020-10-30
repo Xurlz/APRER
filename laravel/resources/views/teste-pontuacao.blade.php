@@ -16,23 +16,35 @@
 
     <div class="row justify-content-center">
         <div class="col-mr-1">
-            <form method="post" action="{{route('adiciona_ponto')}}">
+            <form method="post" action="{{route('atualiza_pontuacao')}}">
                 @csrf
-                <button type = 'submit'>Adiciona Ponto</button>
+                @php
+                $tipo = 'adiciona';
+                @endphp
+                <input name='tipo' value='{{$tipo}}' type = 'hidden'>
+                <input type='submit' value='{{$tipo}}'>
             </form>
         </div>
 
         <div class="col-mr-1">
-            <form method="post" action="{{route('reenicia_ponto')}}">
+            <form method="post" action="{{route('atualiza_pontuacao')}}">
                 @csrf
-                <button type = 'submit'>Reenicia Ponto</button>
+                @php
+                $tipo = 'reenicia';
+                @endphp
+                <input name='tipo' value='{{$tipo}}' type = 'hidden'>
+                <input type='submit' value='{{$tipo}}'>
             </form>
         </div>
 
         <div class="col-mr-1">
-            <form method="post" action="{{route('reduz_ponto')}}">
+            <form method="post" action="{{route('atualiza_pontuacao')}}">
                 @csrf
-                <button type = 'submit'>Reduz Ponto</button>
+                @php
+                $tipo = 'reduz';
+                @endphp
+                <input name='tipo' value='{{$tipo}}' type = 'hidden'>
+                <input type='submit' value='{{$tipo}}'>
             </form>
         </div>
     </div>        

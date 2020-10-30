@@ -21,6 +21,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/teste', [App\Http\Controllers\TestePontuacaoController::class, 'index'])->name('teste_pontuacao');
 
-Route::post('/teste/adiciona-ponto', [App\Http\Controllers\TestePontuacaoController::class, 'adicionaPonto'])->name('adiciona_ponto');
-Route::post('/teste/reduz-ponto', [App\Http\Controllers\TestePontuacaoController::class, 'reduzPonto'])->name('reduz_ponto');
-Route::post('/teste/reenicia-ponto', [App\Http\Controllers\TestePontuacaoController::class, 'reeniciaPonto'])->name('reenicia_ponto');
+Route::post('/teste', [App\Http\Controllers\TestePontuacaoController::class, 'atualizaPontuacao'])->name('atualiza_pontuacao');
