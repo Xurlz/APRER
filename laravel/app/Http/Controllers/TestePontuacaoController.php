@@ -14,9 +14,8 @@ class TestePontuacaoController extends Controller
 
     public function adicionaPonto(Request $request)
     {
-        // $user = $request->user();
+        $user = $request->user();
 
-        $user = User::find('1');
         $user->addPoint(1);
         
         return redirect()->route('teste_pontuacao');
@@ -24,9 +23,8 @@ class TestePontuacaoController extends Controller
 
     public function reduzPonto(Request $request)
     {
-        // $user = $request->user();
+        $user = $request->user();
 
-        $user = User::find('1');
         $user->reducePoint(1);
         
         return redirect()->route('teste_pontuacao');
@@ -34,9 +32,8 @@ class TestePontuacaoController extends Controller
 
     public function reeniciaPonto(Request $request)
     {
-        // $user = $request->user();
+        $user = $request->user();
 
-        $user = User::find('1');
         $user->resetPoint();
         
         return redirect()->route('teste_pontuacao');
