@@ -1,0 +1,16 @@
+*
+{
+    font-family: monospace;
+}
+
+.navbar
+{
+    font-size: 18px;
+    background-color: orange;
+}
+
+#map
+{
+    height: 100%;
+    width: 100%;
+}
