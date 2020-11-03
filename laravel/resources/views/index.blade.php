@@ -1,5 +1,5 @@
 @extends('layouts.app')
 
 @section('content')
-<p>Inserir mapa aqui</p>
+@include('mapa')
 @endsection
