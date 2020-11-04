@@ -15,6 +15,20 @@
     </div>
 
     <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ __('Barra de progresso') }}</div>
+
+                <div class="card-body">
+                    <div class="progress">
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: {{Auth::user()->reputation*10}}%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
         <div class="col-mr-1">
             <form method="post" action="{{route('atualiza_pontuacao')}}">
                 @csrf
