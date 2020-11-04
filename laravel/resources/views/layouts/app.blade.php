@@ -33,7 +33,7 @@
     @endif
     
 </head>
-<body>
+<body class='bg-warning'>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light shadow-sm">
             <div class="container">
