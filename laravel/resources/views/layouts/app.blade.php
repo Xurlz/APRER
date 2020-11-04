@@ -47,11 +47,25 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
+                        <li class="nav-item">
+                            <a class="nav-link" href="pages/login.php">Serviços</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Encontre um Profissional</a>
+                        </li>
                     </ul>
-
+                   
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+
+                        <!-- Barra de pesquisa -->
+                        <div class="collapse navbar-collapse" >
+                            <form class="form-inline my-2 my-lg-0">
+                                <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Search">
+                                <button class="btn btn-warning my-2 my-sm-0" type="submit">Pesquisar</button>
+                            </form>
+                        </div>
+                        
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
