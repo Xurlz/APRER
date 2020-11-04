@@ -16,6 +16,9 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('jquery/jquery.js') }}" defer></script>
     <script src="{{ asset('bootstrap/js/bootstrap.bundle.js') }}" defer></script>
+    @if($paginaInicial)
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCc_kvWmuRQEnuZG3bF6rNjx2-mSYXetQ&callback=initMap" defer></script>
+    @endif
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -161,10 +164,6 @@
                     infoWindow.setContent(browserHasGeolocation ?'Error: The Geolocation service failed.' :'Error: Your browser doesn\'t support geolocation.');
                     infoWindow.open(map);                
                 }
-            </script>
-
-            <script async defer
-                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBaJ17V8D9xyAzg3_kmqeuuLqNrgZPdvL8&callback=initMap">
             </script>
 
         @else
