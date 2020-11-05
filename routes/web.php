@@ -27,4 +27,4 @@ Route::post('/teste/pontuacao', [App\Http\Controllers\TestePontuacaoController::
 ->name('atualiza_pontuacao')
 ->middleware('auth');
 
-Route::get('/teste/avaliacao', function(){ return view('teste-avaliacao');})->middleware('auth');
+Route::get('/teste/avaliacao', [App\Http\Controllers\TesteAvaliacaoController::class, 'index'])->middleware('auth');
