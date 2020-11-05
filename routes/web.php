@@ -19,6 +19,8 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/teste', [App\Http\Controllers\TestePontuacaoController::class, 'index'])->name('teste_pontuacao');
+Route::get('/teste/pontuacao', [App\Http\Controllers\TestePontuacaoController::class, 'index'])->name('teste_pontuacao');
 
-Route::post('/teste', [App\Http\Controllers\TestePontuacaoController::class, 'atualizaPontuacao'])->name('atualiza_pontuacao');
+Route::post('/teste/pontuacao', [App\Http\Controllers\TestePontuacaoController::class, 'atualizaPontuacao'])->name('atualiza_pontuacao');
+
+Route::get('/teste/avaliacao', function(){ return view('teste-avaliacao');});
