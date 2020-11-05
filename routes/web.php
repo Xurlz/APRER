@@ -28,3 +28,4 @@ Route::post('/teste/pontuacao', [App\Http\Controllers\TestePontuacaoController::
 ->middleware('auth');
 
 Route::get('/teste/avaliacao', [App\Http\Controllers\TesteAvaliacaoController::class, 'index'])->middleware('auth');
+Route::post('/teste/avaliacao', [App\Http\Controllers\TesteAvaliacaoController::class, 'enviar'])->middleware('auth');

@@ -10,4 +10,10 @@ class TesteAvaliacaoController extends Controller
     {
         return view('teste-avaliacao');
     }
+
+    public function enviar(Request $request)
+    {
+        print_r($request->all());
+        exit;
+    }
 }
