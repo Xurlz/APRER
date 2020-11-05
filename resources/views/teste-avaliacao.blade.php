@@ -1,7 +1,8 @@
 @extends('layouts.app')
 @section('content')
 <div class="container">
-    <form>
+    <form method='post'>
+        @csrf
         <div class="mb-3">
             <label class="form-label">Profissional</label>
             <select class="form-control">
