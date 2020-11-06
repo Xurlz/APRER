@@ -19,5 +19,17 @@
             </div>
         </div>
     </div>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ __('Opções') }}</div>
+
+                <div class="card-body">
+                    <a href="{{route('teste_pontuacao')}}">Teste Pontuação</a>
+                    <a href="{{route('teste_avaliacao')}}">Teste Avaliação</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 @endsection
