@@ -16,4 +16,9 @@ class Avaliacao extends Model
         'texto',
         'nota'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User')
+    }
 }
