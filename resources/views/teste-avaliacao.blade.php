@@ -5,12 +5,7 @@
         @csrf
         <div class="mb-3">
             <label class="form-label">Profissional</label>
-            <select class="form-control" name="profissional">
-                <option value="" selected> Selecione um Profissional</option>
-                <option value="1"> Profissional a</option>
-                <option value="2"> Profissional b</option>
-                <option value="3"> Profissional c</option>
-            </select>
+            <input type="number" class="form-control" name = "profissional_id">
         </div>
 
         <div class="mb-3">
