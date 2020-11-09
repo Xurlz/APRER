@@ -10,6 +10,7 @@ class Avaliacao extends Model
     use HasFactory;
 
     protected $table = "avaliacoes";
+    public $timestamps = false;
 
     protected $fillable = [
         'user_id',
