@@ -18,7 +18,7 @@ class TesteAvaliacaoController extends Controller
         $avaliacao = new Avaliacao;
         $avaliacao->user_id = $request->profissional_id;
         $avaliacao->nota = $request->nota;
-        $avaliacao->texto = $request->texto;
+        $avaliacao->descricao = $request->texto;
         
 
         var_dump([
