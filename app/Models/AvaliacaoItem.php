@@ -10,6 +10,11 @@ class AvaliacaoItem extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'user_id',
+        'avaliacao_id',
+    ];
+    
     public $timestamps = false;
 
     public function avaliacao () {
