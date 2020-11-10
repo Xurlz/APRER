@@ -30,4 +30,9 @@ class TesteAvaliacaoController extends Controller
         ]);
         exit;
     }
+
+    public function listar()
+    {
+        return view('feedback.index');
+    }
 }
