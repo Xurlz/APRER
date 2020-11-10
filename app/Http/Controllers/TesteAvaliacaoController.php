@@ -15,7 +15,7 @@ class TesteAvaliacaoController extends Controller
     public function enviar(Request $request)
     {
         // print_r($request->all());
-        $avaliacao = new Avaliacao;
+        $avaliacao = new Avaliacao();
         $avaliacao->user_id = $request->profissional_id;
         $avaliacao->nota = $request->nota;
         $avaliacao->descricao = $request->texto;
