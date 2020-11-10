@@ -43,8 +43,8 @@ class User extends Authenticatable
        
     ];
 
-    public function avaliacoes()
+    public function avaliacaoItems()
     {
-        return $this->hasMany('App\Model\Avaliacao');
+        return $this->hasMany('App\Model\AvaliacaoItem');
     }
 }

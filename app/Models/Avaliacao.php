@@ -18,8 +18,8 @@ class Avaliacao extends Model
         'nota'
     ];
 
-    public function user()
+    public function avaliacaoItem()
     {
-        return $this->belongsTo('App\Models\User');
+        return $this->belongsTo('App\Models\AvaliacaoItem');
     }
 }
