@@ -15,9 +15,9 @@ class CreateAvaliacoesTable extends Migration
     {
         Schema::create('avaliacoes', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->references('id')->from('users');
-            $table->integer('nota');
-            $table->text('texto')->nullable();
+            $table->foreignId('user_id')->references('id')->from('users')->comment('Usuário avaliado');
+            $table->integer('nota');    
+            $table->text('descricao')->nullable();
         });
     }
 
