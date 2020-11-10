@@ -9,7 +9,7 @@ class TesteAvaliacaoController extends Controller
 {
     public function index()
     {
-        return view('teste-avaliacao');
+        return view('feedback.index');
     }
 
     public function enviar(Request $request)
@@ -34,5 +34,10 @@ class TesteAvaliacaoController extends Controller
     public function listar()
     {
         return view('feedback.index');
+    }
+
+    public function mostrarFormulario()
+    {
+        return view('feedback.formulario');
     }
 }

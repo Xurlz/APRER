@@ -73,7 +73,7 @@
             </div>
 
             <div class="text-center">
-                <a href="#" class='btn btn-danger'> Adicionar Feedback </a>
+                <a href="{{route('formulario_avaliacao')}}" class='btn btn-danger'> Adicionar Feedback </a>
             </div>     
 
         </div>

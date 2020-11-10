@@ -35,4 +35,8 @@ Route::post('/teste/avaliacao', [App\Http\Controllers\TesteAvaliacaoController::
 
 Route::get('/teste/avaliacao/listagem', [App\Http\Controllers\TesteAvaliacaoController::class, 'listar'])
 ->middleware('auth')
-->name('listagem-avaliacao');
+->name('listagem_avaliacao');
+
+Route::get('/teste/avaliacao/inserir', [App\Http\Controllers\TesteAvaliacaoController::class, 'mostrarFormulario'])
+->middleware('auth')
+->name('formulario_avaliacao');
