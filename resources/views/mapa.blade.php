@@ -42,7 +42,7 @@
             google.maps.event.addListener( marker, 'click', function() {
                 //infoWindow.setContent( this.info );
                 //infoWindow.open( map, this );
-                window.location.href = "pages/login.php";
+                window.location.href = "{{route('teste_avaliacao')}}";
             });            
         };
 
