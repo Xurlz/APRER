@@ -12,7 +12,7 @@
                         <table class="table">
                             <tr>
                                 <th>Nome</th>
-                                <td>Fulano de tal</td>
+                                <td>Aldecir Soares</td>
                             </tr>
                             <tr>
                                 <th>Profissao</th>
@@ -21,6 +21,14 @@
                             <tr>
                                 <th>Região</th>
                                 <td>Bela Vista São Paulo</td>
+                            </tr>
+                            <tr>
+                                <th>Telefone</th>
+                                <td>7939-2257</td>
+                            </tr>
+                            <tr>
+                                <th>Email</th>
+                                <td>aldec_s@mail.com</td>
                             </tr>
                         </table>    
                     </p>
@@ -39,13 +47,13 @@
                                 </td>
                                 <td>5</td>
                             </tr>
-                            <tr>
+                            <!-- <tr>
                                 <td>
                                     <h3> Não recomendo  </h3>
                                     <blockquote class='blockquote'>Apesar de seus serviços, continuo com defeitos aqui ☹</blockquote>
                                 </td>
                                 <td>2</td>
-                            </tr>
+                            </tr> -->
                             <tr>
                                 <td>
                                     <h3> Rápido e eficiente </h3>
@@ -73,7 +81,7 @@
             </div>
 
             <div class="text-center">
-                <a href="{{route('formulario_avaliacao')}}" class='btn btn-danger'> Adicionar Feedback </a>
+                <a href="{{route('formulario_avaliacao')}}" class='btn btn-warning'> Adicionar Feedback </a>
             </div>     
 
         </div>

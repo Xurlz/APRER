@@ -23,7 +23,7 @@
                 </div>
                 
                 <div class="row justify-content-center">
-                    <button type="submit" class="btn btn-danger">Registrar Feedback</button>
+                    <button type="submit" class="btn btn-warning">Registrar Feedback</button>
                 </div>
             </form>
         </div>
