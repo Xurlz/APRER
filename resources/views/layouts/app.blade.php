@@ -1,5 +1,6 @@
 @php
     $paginaInicial = url()->current() === route('pagina_inicial');
+    $paginaAvaliacao = url()->current() === route('teste_avaliacao');
 @endphp
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -107,10 +108,18 @@
         </main>
         @endif
 
-        <footer class="footer bg-footer container-fluid text-center">
+        @if ($paginaAvaliacao)
+        <footer class="footer-fixo container-fluid text-center">
             <p class="margin">APRER - Aplicativo Para Resoluções Residenciais  _  Todos os direitos reservados
             <br>Rua Augusta, 1508 - Consolação - Sao Paulo - SP</br></p>
         </footer>
+        @else
+        <footer class="footer container-fluid text-center">
+            <p class="margin">APRER - Aplicativo Para Resoluções Residenciais  _  Todos os direitos reservados
+            <br>Rua Augusta, 1508 - Consolação - Sao Paulo - SP</br></p>
+        </footer>
+        @endif
+        
     </div>
     
 </body>
