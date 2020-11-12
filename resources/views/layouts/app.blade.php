@@ -27,7 +27,7 @@
     @if($paginaInicial)
     <style>
         #map {
-            height: 800px;
+            height: 750px;
             width: 100%;
         }
     </style>
