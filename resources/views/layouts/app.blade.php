@@ -49,10 +49,10 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="pages/login.php">Serviços</a>
+                            <a class="nav-link" href="#">Serviços</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Encontre um Profissional</a>
+                            <a class="nav-link" href="{{route('pagina_inicial')}}">Encontre um Profissional</a>
                         </li>
                     </ul>
                    
@@ -84,6 +84,10 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a href="{{route('home')}}" class="dropdown-item">{{__('Home')}}</a>
+
+                                    <a href="{{route('pagina_inicial')}}" class="dropdown-item">{{__('Pagina Inicial')}}</a>
+                                    
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
