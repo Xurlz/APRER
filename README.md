@@ -12,10 +12,6 @@ PHP: https://www.php.net/distributions/php-7.4.12.tar.bz2
 Node com npm: https://nodejs.org/
 Composer: https://getcomposer.org/download/
 
-## Branch correta
-O projeto atual está em outra branch, para entrar na branch correta execute:
-<code>git checkout laravel</code>
-
 ## Pacotes e comandos específicos
 Para poder executar a pagina, Abra o terminal bash na raiz do projeto e execute os seguintes comandos:
 
